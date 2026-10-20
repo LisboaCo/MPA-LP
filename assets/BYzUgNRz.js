@@ -1,0 +1,1 @@
+import{V as n,z as i,A as t,a4 as a,a3 as o}from"./EwDkLrRW.js";const s={class:"hl-pricing-table-ribbon-container"},c={class:"hl-pricing-table-ribbon column-highlight-label"},r=n({__name:"PricingTableRibbon",props:{text:{}},setup(l){return(e,b)=>(i(),t("div",s,[a("div",c,o(e.text),1)]))}}),p=Object.assign(r,{__name:"PreviewElementsPricingTableRibbon"});export{p as default};

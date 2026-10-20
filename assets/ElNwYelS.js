@@ -1,0 +1,1 @@
+import{V as t,y as o,W as u}from"./EwDkLrRW.js";const s=t({name:"ClientOnly",setup(a,{slots:e}){const n=o(!1);return u(()=>{n.value=!0}),()=>{var l;return n.value?(l=e.default)==null?void 0:l.call(e):null}}});export{s as m};

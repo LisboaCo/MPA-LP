@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO OBRIGATÓRIO -->
+    <title>BPC LOAS: Saiba se Você Tem Direito | MPA Advogados</title>
+    <meta name="description" content="BPC LOAS: benefício de um salário mínimo para idosos com 65 anos ou mais e pessoas com deficiência com renda familiar baixa. Solicite a análise do seu caso com a MPA Advogados. Mais de 28 anos de experiência.">
+    <meta name="keywords" content="BPC LOAS, benefício LOAS, benefício assistencial, advogado previdenciário, INSS, LOAS deficiente, LOAS idoso">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#5E1210">
+    <link rel="canonical" href="/bpc-loas">
+    <link rel="icon" type="image/png" href="/static/img/logo-mpa.png">
+
+    <!-- Open Graph OBRIGATÓRIO -->
+    <meta property="og:title" content="BPC LOAS: Saiba se Você Tem Direito | MPA Advogados">
+    <meta property="og:description" content="Um salário mínimo garantido por lei para idosos e pessoas com deficiência com renda familiar baixa. Descubra sem compromisso se você tem direito.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:image" content="/static/img/logo-mpa.png">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N9Q8LF5B');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Tracking base obrigatório (padrão da empresa) -->
+    <script src="/static/tracking.js"></script>
+
+    <!-- habilita animações só quando há JS (degrada elegante sem JS) -->
+    <script>document.documentElement.classList.add('js');</script>
+
+    <style>
+        /* ===== RESET ===== */
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; font-size:16.5px; }
+        body {
+            font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+            font-weight:400; color:#26211f; line-height:1.7; overflow-x:hidden;
+            background:#fff; -webkit-font-smoothing:antialiased;
+        }
+        img { max-width:100%; height:auto; display:block; }
+        a { text-decoration:none; color:inherit; }
+        ul, ol { list-style:none; }
+
+        /* ===== TIPOGRAFIA (serif elegante p/ advocacia) ===== */
+        h1, h2, h3 { font-family:'Playfair Display', Georgia, 'Times New Roman', serif; line-height:1.18; }
+        h1, h2 { font-weight:800; }
+
+        /* ===== ANIMAÇÕES ===== */
+        @keyframes fadeUp { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:none; } }
+        .js .reveal { opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .75s cubic-bezier(.2,.7,.3,1); }
+        .js .reveal.in { opacity:1; transform:none; }
+        .js .reveal.d1{transition-delay:.08s} .js .reveal.d2{transition-delay:.16s}
+        .js .reveal.d3{transition-delay:.24s} .js .reveal.d4{transition-delay:.32s}
+        /* entrada do hero (on load) */
+        .js .hero-nav { opacity:0; animation:fadeUp .7s ease .05s forwards; }
+        .js .hero-inner > * { opacity:0; animation:fadeUp .85s cubic-bezier(.2,.7,.3,1) forwards; }
+        .js .hero-inner > *:nth-child(1){animation-delay:.20s}
+        .js .hero-inner > *:nth-child(2){animation-delay:.36s}
+        .js .hero-inner > *:nth-child(3){animation-delay:.52s}
+        .js .hero-inner > *:nth-child(4){animation-delay:.68s}
+        @media (prefers-reduced-motion: reduce) {
+            .js .reveal, .js .hero-inner > *, .js .hero-nav { opacity:1 !important; transform:none !important; animation:none !important; transition:none !important; }
+        }
+
+        /* ===== VARIÁVEIS ===== */
+        :root {
+            --red:#5E1210;          /* vinho/marrom da marca MPA */
+            --red-bright:#b70707;   /* vermelho de destaque */
+            --ink:#1a1a1a;
+            --ink-soft:#555;
+            --bg-soft:#f6f4f2;
+            --line:#e9e6e3;
+            --gold:#c9a23a;
+            --radius:20px;
+            --shadow:0 18px 50px rgba(20,12,10,.13);
+            --maxw:1160px;
+            --hero-img:url('/static/img/hero2.png');
+            --hero-img-mobile:url('/static/img/mobile hero 2.png');
+            --logo:url(/static/img/logo-mpa.png);
+            --logo-white:url(/static/img/logo-mpa-white.png);
+        }
+
+        /* ===== CONTAINER ===== */
+        .container { width:100%; max-width:var(--maxw); margin:0 auto; padding:0 22px; }
+
+        /* ===== LOGO (brasão real da MPA) ===== */
+        .brand { display:flex; align-items:center; gap:13px; }
+        .brand .crest { width:46px; height:46px; flex:0 0 46px; background:var(--logo) center/contain no-repeat; }
+        .brand .word { font-weight:800; font-size:1.05rem; letter-spacing:-.3px; line-height:1.1; color:var(--ink); }
+        .brand .word small { display:block; font-weight:500; font-size:.62rem; color:var(--ink-soft); letter-spacing:1.5px; text-transform:uppercase; margin-top:2px; }
+
+        /* ===== BOTÃO CTA (premium) ===== */
+        .btn-cta {
+            position:relative; overflow:hidden; isolation:isolate;
+            display:inline-flex; align-items:center; justify-content:center; gap:11px;
+            background:linear-gradient(135deg,#7d1916 0%,#5E1210 55%,#430b09 100%);
+            color:#fff; font-family:'Inter',sans-serif; font-weight:600; font-size:.92rem; letter-spacing:.3px;
+            padding:14px 28px; border-radius:999px; border:1px solid rgba(255,255,255,.10); cursor:pointer;
+            text-align:center; line-height:1.3;
+            transition:transform .25s cubic-bezier(.2,.7,.3,1), box-shadow .3s ease;
+            box-shadow:0 10px 26px rgba(94,18,16,.34), inset 0 1px 0 rgba(255,255,255,.16);
+        }
+        .btn-cta::before {
+            content:""; position:absolute; z-index:-1; top:0; left:-130%; width:55%; height:100%;
+            background:linear-gradient(100deg, transparent, rgba(255,255,255,.30), transparent);
+            transform:skewX(-18deg); transition:left .65s ease;
+        }
+        .btn-cta:hover { transform:translateY(-3px); box-shadow:0 20px 42px rgba(94,18,16,.5), inset 0 1px 0 rgba(255,255,255,.22); }
+        .btn-cta:hover::before { left:135%; }
+        .btn-cta:active { transform:translateY(-1px); }
+        .btn-lg { padding:15px 32px; font-size:.97rem; }
+
+        /* ===== HERO (tela cheia, com a foto real da equipe) ===== */
+        .hero {
+            position:relative; color:#fff; min-height:100vh; display:flex; flex-direction:column;
+            background:
+                linear-gradient(90deg, rgba(13,7,6,.93) 0%, rgba(13,7,6,.78) 36%, rgba(13,7,6,.32) 66%, rgba(13,7,6,.12) 100%),
+                var(--hero-img) center 18%/cover no-repeat;
+        }
+        .nav-inner { display:flex; align-items:center; justify-content:space-between; }
+        .hero-nav { position:relative; z-index:3; }
+        .hero-nav .container { max-width:none; padding-left:clamp(28px,7vw,140px); padding-right:clamp(20px,4vw,48px); }
+        .hero-nav .nav-inner { height:92px; }
+        .brand-light .crest { width:78px; height:64px; flex:0 0 78px; background:var(--logo-white) left center/contain no-repeat; }
+        .brand-light .word { color:#fff; }
+        .brand-light .word small { color:rgba(255,255,255,.72); }
+        .hero-body { position:relative; z-index:2; flex:1; display:flex; align-items:center; }
+        .hero-body .container { max-width:none; padding:24px clamp(20px,4vw,48px) 84px clamp(28px,7vw,140px); }
+        .hero-inner { max-width:600px; }
+        .hero h1 { font-size:clamp(2.1rem,4.6vw,3.4rem); font-weight:800; line-height:1.16; letter-spacing:-.2px; }
+        .hero h1 .hl { color:#f0c14b; }
+        .hero-sub { font-size:clamp(1.05rem,1.7vw,1.22rem); font-weight:300; color:#e7ddda; max-width:54ch; margin:24px 0 40px; line-height:1.65; }
+        .hero-cta { display:flex; flex-wrap:wrap; gap:16px; align-items:center; }
+        .badges { display:flex; flex-wrap:wrap; gap:11px; margin-top:30px; }
+        .badges > span { display:inline-flex; align-items:center; gap:10px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14); padding:7px 18px 7px 7px; border-radius:50px; font-size:.92rem; color:#fff; font-weight:600; backdrop-filter:blur(6px); }
+        .badges > span .bi { width:30px; height:30px; flex:0 0 30px; border-radius:50%; display:grid; place-items:center; background:linear-gradient(135deg,#41c067,#268f44); box-shadow:0 3px 10px rgba(45,160,75,.45); }
+        .badges > span .bi svg { width:16px; height:16px; stroke:#fff; }
+
+        /* ===== SEÇÕES ===== */
+        section.block { padding:104px 0; position:relative; }
+        /* textura sutil nos fundos claros */
+        section.block:not(.bg-soft):not(#formulario) {
+            background-color:#fcfbfa;
+            background-image:
+                radial-gradient(circle at 12% 16%, rgba(94,18,16,.05), transparent 42%),
+                radial-gradient(circle at 88% 86%, rgba(201,162,58,.07), transparent 44%),
+                radial-gradient(rgba(70,45,35,.055) 1px, transparent 1px);
+            background-size:100% 100%, 100% 100%, 22px 22px;
+        }
+        section.bg-soft {
+            background-color:#f3efea;
+            background-image:
+                radial-gradient(circle at 85% 12%, rgba(94,18,16,.055), transparent 44%),
+                radial-gradient(rgba(70,45,35,.06) 1px, transparent 1px);
+            background-size:100% 100%, 22px 22px;
+        }
+        .sec-head { text-align:center; max-width:780px; margin:0 auto 62px; }
+        .eyebrow { color:var(--red-bright); font-weight:700; text-transform:uppercase; letter-spacing:1.5px; font-size:.76rem; margin-bottom:14px; }
+        .sec-head h2 { font-size:clamp(1.7rem,3.2vw,2.45rem); font-weight:800; line-height:1.2; letter-spacing:-.2px; color:var(--ink); }
+        .sec-head h2 .hl { color:var(--red); }
+        .sec-head p { color:var(--ink-soft); font-size:1.06rem; margin-top:16px; }
+
+        /* ===== CARDS DOR ===== */
+        .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+        .card {
+            background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:42px 36px;
+            transition:transform .25s ease,box-shadow .25s ease; box-shadow:0 4px 14px rgba(0,0,0,.04);
+        }
+        .card:hover { transform:translateY(-6px); box-shadow:var(--shadow); }
+        .card .ic { width:58px; height:58px; border-radius:16px; background:rgba(94,18,16,.07); color:var(--red); display:grid; place-items:center; margin-bottom:22px; }
+        .card .ic svg { width:28px; height:28px; stroke:var(--red); }
+        .card h3 { font-size:1.14rem; font-weight:700; margin-bottom:10px; line-height:1.3; color:var(--ink); }
+        .card p { color:var(--ink-soft); font-size:.97rem; }
+
+        /* ===== FAIXA SOLUÇÃO ===== */
+        .solve { margin-top:56px; color:#fff; border-radius:var(--radius); padding:54px 44px; text-align:center; box-shadow:var(--shadow);
+            background:
+                radial-gradient(rgba(255,255,255,.07) 1px, transparent 1px) 0 0/19px 19px,
+                radial-gradient(circle at 85% 15%, rgba(240,193,75,.14), transparent 45%),
+                linear-gradient(135deg,#7a1714,#3f0b09); }
+        .solve h3 { font-size:clamp(1.3rem,2.6vw,1.7rem); font-weight:700; max-width:48ch; margin:0 auto 14px; line-height:1.3; }
+        .solve p { color:#f3dcd9; max-width:62ch; margin:0 auto 28px; }
+        .solve .btn-cta { background:#fff; color:var(--red); box-shadow:none; }
+        .solve .btn-cta:hover { background:#f3eeed; color:#7a1714; }
+
+        /* ===== BENEFÍCIOS ===== */
+        .benefits { display:grid; grid-template-columns:repeat(2,1fr); gap:26px; }
+        .benefit { display:flex; gap:22px; background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:36px; align-items:flex-start; transition:transform .25s ease,box-shadow .25s ease; }
+        .benefit:hover { transform:translateY(-4px); box-shadow:var(--shadow); }
+        .benefit .ic { flex:0 0 54px; width:54px; height:54px; border-radius:16px; background:var(--red); display:grid; place-items:center; }
+        .benefit .ic svg { width:26px; height:26px; stroke:#fff; }
+        .benefit h3 { font-size:1.1rem; font-weight:700; margin-bottom:6px; line-height:1.3; color:var(--ink); }
+        .benefit p { color:var(--ink-soft); font-size:.95rem; }
+        .benefit-wide { grid-column:1 / -1; }
+        .benefits-label { text-align:center; font-family:'Playfair Display',Georgia,serif; font-weight:700; font-style:italic; font-size:clamp(1.2rem,2vw,1.5rem); color:var(--red); margin:-34px auto 34px; }
+
+        /* ===== QUEM PODE ===== */
+        .quem-grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; max-width:920px; margin:0 auto; }
+        .quem-item { display:flex; align-items:flex-start; gap:16px; background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:30px; transition:transform .25s ease,box-shadow .25s ease; }
+        .quem-item:hover { transform:translateY(-3px); box-shadow:var(--shadow); }
+        .quem-check { flex-shrink:0; width:36px; height:36px; background:var(--red); border-radius:50%; display:grid; place-items:center; margin-top:2px; }
+        .quem-check svg { width:18px; height:18px; fill:#fff; }
+        .quem-texto { font-size:1rem; line-height:1.5; color:var(--ink-soft); }
+        .quem-texto strong { color:var(--ink); font-weight:700; }
+
+        /* ===== STATS (faixa de autoridade) ===== */
+        .stats { position:relative; color:#fff; border-top:1px solid rgba(240,193,75,.18); border-bottom:1px solid rgba(240,193,75,.18);
+            background:
+                radial-gradient(rgba(240,193,75,.06) 1px, transparent 1px) 0 0/22px 22px,
+                linear-gradient(180deg,#1a1411 0%,#0e0b0a 100%); }
+        .stats::before { content:""; position:absolute; top:0; left:50%; transform:translateX(-50%); width:170px; height:3px; background:linear-gradient(90deg,transparent,var(--gold),transparent); border-radius:3px; }
+        .stats-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; padding:30px 0; }
+        .stat { padding:34px 26px; text-align:center; border-radius:18px; transition:transform .25s ease, background .25s ease; }
+        .stat:hover { transform:translateY(-5px); background:rgba(255,255,255,.035); }
+        .stat .ic { width:58px; height:58px; margin:0 auto 18px; border-radius:50%; display:grid; place-items:center; background:rgba(240,193,75,.10); border:1px solid rgba(240,193,75,.32); }
+        .stat .ic svg { width:27px; height:27px; stroke:var(--gold); }
+        .stat .n { font-family:'Playfair Display',Georgia,serif; font-size:2.25rem; font-weight:700; color:#f0c14b; line-height:1.08; }
+        .stat .l { font-size:.9rem; color:#b6aeab; margin-top:8px; }
+        .stat .l b { display:block; color:#fff; font-weight:700; font-size:1.06rem; margin-bottom:3px; letter-spacing:.2px; }
+
+        /* ===== COMO FUNCIONA (linha do tempo horizontal) ===== */
+        .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:36px; position:relative; padding-top:8px; }
+        .steps::before { content:""; position:absolute; top:46px; left:17%; right:17%; height:3px; border-radius:3px; background:linear-gradient(90deg, var(--red) 0%, var(--gold) 100%); opacity:.4; z-index:0; }
+        .step { position:relative; z-index:1; text-align:center; padding:0 10px; }
+        .step .num { position:relative; display:grid; place-items:center; width:80px; height:80px; margin:0 auto 22px; border-radius:50%; background:#fff; border:2px solid rgba(94,18,16,.25); color:var(--red); font-family:'Playfair Display',Georgia,serif; font-weight:700; font-size:1.9rem; box-shadow:0 10px 26px rgba(94,18,16,.16); transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+        .step:hover .num { transform:translateY(-5px); border-color:var(--red); box-shadow:0 16px 34px rgba(94,18,16,.28); }
+        .step .ic { width:48px; height:48px; margin:0 auto 16px; border-radius:14px; background:rgba(94,18,16,.07); display:grid; place-items:center; }
+        .step .ic svg { width:24px; height:24px; stroke:var(--red); }
+        .step h3 { font-size:1.22rem; font-weight:700; margin-bottom:10px; color:var(--ink); }
+        .step p { color:var(--ink-soft); font-size:.97rem; line-height:1.65; max-width:30ch; margin:0 auto; }
+
+        /* ===== FORMULÁRIO ===== */
+        #formulario { color:#fff;
+            background:
+                radial-gradient(rgba(255,255,255,.045) 1px, transparent 1px) 0 0/20px 20px,
+                radial-gradient(circle at 18% 12%, rgba(94,18,16,.5), transparent 45%),
+                linear-gradient(160deg,#16110f,#0d0a09); }
+        .form-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:50px; align-items:center; }
+        .form-grid h2 { font-size:clamp(1.7rem,3.2vw,2.4rem); font-weight:800; margin-bottom:18px; line-height:1.2; letter-spacing:-.2px; }
+        .form-grid h2 .hl { color:#f0c14b; }
+        .form-grid .lead { color:#d8cfcc; font-size:1.06rem; margin-bottom:24px; }
+        .form-grid ul { display:grid; gap:13px; }
+        .form-grid ul li { display:flex; align-items:center; gap:11px; color:#eee; font-weight:500; }
+        .form-grid ul li svg { width:20px; height:20px; flex:0 0 20px; stroke:#6ed08a; }
+        .form-card { background:#fff; border-radius:22px; box-shadow:0 30px 70px rgba(0,0,0,.5); overflow:hidden; min-width:0; }
+        .fc-head { display:flex; align-items:center; gap:14px; padding:22px 24px; color:#fff;
+            background:
+                radial-gradient(rgba(255,255,255,.09) 1px, transparent 1px) 0 0/15px 15px,
+                linear-gradient(135deg,#7a1714 0%,#480d0b 100%); }
+        .fc-head .fc-ic { width:48px; height:48px; flex:0 0 48px; border-radius:50%; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.28); display:grid; place-items:center; }
+        .fc-head .fc-ic svg { width:24px; height:24px; stroke:#fff; }
+        .fc-head .fc-txt b { display:block; color:#fff; font-size:1.04rem; font-weight:700; line-height:1.25; }
+        .fc-head .fc-txt span { font-size:.83rem; color:rgba(255,255,255,.85); }
+        /* formulário nativo */
+        .lead-form { padding:22px 22px 24px; display:grid; gap:13px; }
+        .field label { display:block; font-size:.82rem; font-weight:600; color:var(--ink); margin-bottom:6px; }
+        .input-wrap { position:relative; }
+        .input-wrap .fi { position:absolute; left:14px; top:50%; transform:translateY(-50%); width:18px; height:18px; stroke:#a89d99; pointer-events:none; transition:stroke .2s ease; }
+        .field input, .field select {
+            width:100%; padding:13px 14px 13px 42px; border:1.5px solid var(--line); border-radius:12px;
+            font-family:'Inter',sans-serif; font-size:.98rem; color:var(--ink); background:#fff;
+            transition:border-color .2s ease, box-shadow .2s ease; -webkit-appearance:none; appearance:none;
+        }
+        .field input::placeholder { color:#b3aaa6; }
+        .field input:focus, .field select:focus { outline:none; border-color:var(--red); box-shadow:0 0 0 3px rgba(94,18,16,.12); }
+        .input-wrap:focus-within .fi { stroke:var(--red); }
+        .lead-form .btn-cta { width:100%; margin-top:4px; }
+        .lead-form .note { text-align:center; font-size:.8rem; color:var(--ink-soft); margin:2px 0 0; }
+        .form-ok { display:none; padding:48px 28px; text-align:center; }
+        .form-ok.show { display:block; animation:fadeUp .5s ease; }
+        .form-ok .ok-ic { width:66px; height:66px; margin:0 auto 18px; border-radius:50%; background:rgba(95,208,122,.14); display:grid; place-items:center; }
+        .form-ok .ok-ic svg { width:34px; height:34px; stroke:#3bb35b; }
+        .form-ok h3 { font-size:1.4rem; color:var(--ink); margin-bottom:8px; }
+        .form-ok p { color:var(--ink-soft); font-size:.96rem; }
+
+        /* ===== FOOTER (estilo MPA, vermelho com textura) ===== */
+        footer { position:relative; color:#f1dedc; padding:74px 0 28px;
+            background:
+                radial-gradient(rgba(255,255,255,.05) 1px, transparent 1px) 0 0/22px 22px,
+                radial-gradient(circle at 88% 0%, rgba(0,0,0,.28), transparent 48%),
+                linear-gradient(160deg,#7c1614 0%,#580f0d 100%); }
+        .foot-grid { display:grid; grid-template-columns:1.25fr 1.1fr 1.1fr 1fr; gap:36px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,.16); }
+        footer h4 { color:#fff; font-size:.92rem; margin-bottom:18px; font-weight:700; text-transform:uppercase; letter-spacing:1.2px; }
+        footer .brand { margin-bottom:16px; }
+        footer .brand .crest { width:68px; height:56px; flex:0 0 68px; background:var(--logo-white) left center/contain no-repeat; }
+        footer .brand .word { color:#fff; }
+        footer .brand .word small { color:rgba(255,255,255,.72); }
+        footer p { font-size:.92rem; color:#eed4d2; line-height:1.6; }
+        footer a { color:#eed4d2; transition:color .2s ease; }
+        footer a:hover { color:#fff; }
+        footer ul li { font-size:.92rem; color:#eed4d2; margin-bottom:11px; }
+        .foot-addr p { margin-bottom:13px; }
+        .foot-contact a { display:block; font-weight:700; color:#fff; margin-bottom:9px; font-size:1.02rem; }
+        .foot-areas li { display:flex; align-items:flex-start; gap:9px; }
+        .foot-areas li svg { width:16px; height:16px; flex:0 0 16px; stroke:var(--gold); margin-top:3px; }
+        .trophy { display:inline-flex; align-items:center; gap:9px; margin-top:18px; color:#f3cf7e; font-weight:600; font-size:.9rem; }
+        .trophy svg { width:20px; height:20px; stroke:#f3cf7e; }
+        .copy { padding-top:22px; text-align:center; font-size:.84rem; color:rgba(255,255,255,.72); }
+        .copy strong { color:#fff; }
+        .copy .disc { display:block; margin-top:12px; font-size:.77rem; color:rgba(255,255,255,.5); max-width:74ch; margin-left:auto; margin-right:auto; }
+        /* faixa de CTA no topo do rodapé */
+        .foot-cta { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:26px; padding-bottom:42px; margin-bottom:42px; border-bottom:1px solid rgba(255,255,255,.16); }
+        .foot-cta h3 { font-size:clamp(1.35rem,2.4vw,1.9rem); font-weight:800; color:#fff; line-height:1.22; max-width:24ch; }
+        .foot-cta p { color:#eed4d2; font-size:1rem; margin-top:8px; max-width:46ch; }
+        .foot-wa { display:inline-flex; align-items:center; gap:12px; flex:0 0 auto; background:#25D366; color:#0a3d1c; font-family:'Inter',sans-serif; font-weight:800; font-size:1.02rem; padding:16px 30px; border-radius:999px; white-space:nowrap; box-shadow:0 12px 30px rgba(37,211,102,.32); transition:transform .25s ease, box-shadow .25s ease; }
+        .foot-wa:hover { transform:translateY(-3px); color:#0a3d1c; box-shadow:0 18px 40px rgba(37,211,102,.5); }
+        .foot-wa svg { width:24px; height:24px; fill:#0a3d1c; }
+        /* marca do rodapé (logo em destaque) */
+        .foot-brand-lockup { display:flex; align-items:center; gap:15px; margin-bottom:18px; }
+        .foot-brand-lockup .crest { width:72px; height:60px; flex:0 0 72px; background:var(--logo-white) left center/contain no-repeat; }
+        .foot-brand-lockup .word { font-family:'Inter',sans-serif; font-weight:800; font-size:1.2rem; color:#fff; line-height:1.1; letter-spacing:-.3px; }
+        .foot-brand-lockup .word small { display:block; font-family:'Inter',sans-serif; font-weight:500; font-size:.64rem; color:rgba(255,255,255,.7); letter-spacing:1.6px; text-transform:uppercase; margin-top:4px; }
+        .foot-contact .wa-line { display:inline-flex; align-items:center; gap:8px; margin-top:6px; }
+        .foot-contact .wa-line svg { width:18px; height:18px; fill:#25D366; }
+
+        /* ===== LEITURA CONFORTÁVEL (público idoso) ===== */
+        .sec-head p, .card p, .benefit p, .step p, .quem-texto,
+        .form-grid .lead, .form-grid ul li { font-size:1.02rem; line-height:1.6; }
+        .hero-sub { font-size:clamp(1.04rem,1.5vw,1.18rem); }
+        footer p, footer ul li, .foot-contact a { font-size:.96rem; }
+
+        /* ===== RESPONSIVO ===== */
+        @media (max-width:900px) {
+            /* Hero mobile: foto vertical da advogada, texto na base sobre a área escura */
+            .hero { min-height:100vh;
+                background:linear-gradient(180deg, rgba(13,7,6,.55) 0%, rgba(13,7,6,.12) 16%, rgba(13,7,6,.10) 40%, rgba(13,7,6,.74) 67%, rgba(13,7,6,.97) 100%), var(--hero-img-mobile) top center/cover no-repeat; }
+            .hero-body { align-items:flex-end; }
+            .hero-body .container { max-width:100%; padding:20px clamp(22px,6vw,40px) 46px; }
+            .hero-inner { max-width:100%; }
+            .form-grid { grid-template-columns:1fr; gap:32px; }
+            .cards, .benefits, .quem-grid, .steps { grid-template-columns:1fr; }
+            .steps::before { display:none; }
+            .stats-grid { grid-template-columns:1fr; }
+            .stat { border-right:0; border-bottom:1px solid rgba(255,255,255,.09); }
+            .foot-grid { grid-template-columns:1fr 1fr; gap:30px 24px; }
+        }
+        @media (max-width:560px) {
+            section.block { padding:72px 0; }
+            .hero-inner, .hero h1, .hero-sub, .hero-cta, .badges { width:100%; max-width:100%; min-width:0; }
+            .hero h1 { font-size:1.42rem; line-height:1.22; }
+            .hero-sub { font-size:.9rem; margin:10px 0 18px; line-height:1.5; }
+            .hero-cta { margin:0; display:block; }
+            .badges { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); margin-top:16px; gap:8px; }
+            .badges > span { width:100%; min-width:0; justify-content:center; flex-direction:column; gap:5px; padding:8px 6px; border-radius:16px; font-size:.76rem; line-height:1.15; text-align:center; }
+            .badges > span .bi { width:25px; height:25px; flex:0 0 25px; }
+            .badges > span .bi svg { width:14px; height:14px; }
+            .hero-body .container { padding-bottom:72px; padding-top:14px; }
+            .solve { padding:34px 22px; }
+            .btn-cta { width:100%; max-width:100%; min-width:0; padding:13px 14px; font-size:.82rem; white-space:normal; }
+            .hero-nav .nav-inner { height:70px; }
+            .foot-grid { grid-template-columns:1fr; gap:28px; }
+            .foot-cta { flex-direction:column; align-items:flex-start; gap:18px; }
+            .foot-wa { width:100%; justify-content:center; }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N9Q8LF5B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- ===== HERO (tela cheia) ===== -->
+    <section class="hero" id="topo">
+        <!-- Nav transparente sobre o hero (sem barra fixa) -->
+        <div class="hero-nav">
+            <div class="container nav-inner">
+                <a href="#topo" class="brand brand-light" aria-label="MPA Advogados & Associados">
+                    <span class="crest" role="img" aria-label="Logo MPA Advogados"></span>
+                    <span class="word">MPA Advogados<small>Advogados &amp; Associados</small></span>
+                </a>
+            </div>
+        </div>
+        <div class="hero-body">
+            <div class="container">
+                <div class="hero-inner">
+                    <h1>Você pode ter direito a <span class="hl">um salário mínimo</span> sem nunca ter trabalhado de carteira assinada.</h1>
+                    <p class="hero-sub">Se você tem 65+ anos ou é uma pessoa com deficiência, e tem baixa renda familiar, o BPC LOAS é seu direito por lei.</p>
+                    <div class="hero-cta">
+                        <a href="#formulario" class="btn-cta btn-lg" onclick="trackCTA('hero-bpc')">DESCOBRIR SE TENHO DIREITO AO BPC LOAS</a>
+                    </div>
+                    <div class="badges">
+                        <span><span class="bi"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> 65 anos ou mais</span>
+                        <span><span class="bi"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> Pessoa com deficiência</span>
+                        <span><span class="bi"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> Renda familiar baixa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DORES / O QUE É ===== -->
+    <section class="block">
+        <div class="container">
+            <div class="sec-head">
+                <div class="eyebrow">Benefício assistencial do INSS</div>
+                <h2>O <span class="hl">BPC LOAS</span> pode mudar a sua vida e talvez você nem saiba que tem direito a ele.</h2>
+                <p>Você não está desamparado. Se você passa por dificuldade financeira, solicite o benefício que vai dar mais qualidade de vida para você e sua família.</p>
+            </div>
+            <div class="cards">
+                <article class="card">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12" y2="17"/></svg></div>
+                    <h3>Será que eu tenho direito ao BPC LOAS?</h3>
+                    <p>Muita gente que se encaixa nos requisitos nunca solicita o benefício por simples falta de informação.</p>
+                </article>
+                <article class="card">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="9.5" y1="9.5" x2="14.5" y2="14.5"/><line x1="14.5" y1="9.5" x2="9.5" y2="14.5"/></svg></div>
+                    <h3>Um erro no pedido pode negar tudo?</h3>
+                    <p>Falhas na documentação ou no cálculo da renda familiar levam ao indeferimento, mesmo de quem tem direito.</p>
+                </article>
+                <article class="card">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+                    <h3>Preciso ter contribuído ao INSS?</h3>
+                    <p>Não. O BPC LOAS é assistencial: não exige contribuições nem tempo de trabalho com carteira assinada.</p>
+                </article>
+            </div>
+            <div class="solve">
+                <h3>O BPC LOAS garante um salário mínimo por mês a quem tem direito.</h3>
+                <p>Com o apoio de um advogado previdenciário especialista, você organiza tudo da forma certa e evita a negativa do INSS.</p>
+                <a href="#formulario" class="btn-cta" onclick="trackCTA('dores-bpc')">DESCOBRIR SE TENHO DIREITO AO BPC LOAS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BENEFÍCIOS / A MPA AJUDA ===== -->
+    <section class="block bg-soft">
+        <div class="container">
+            <div class="sec-head">
+                <div class="eyebrow">Apoio profissional</div>
+                <h2>Conte com apoio profissional para solicitar o <span class="hl">Auxílio LOAS</span>.</h2>
+                <p>Mesmo que você tenha direito, seu pedido pode ser negado por erro na documentação.</p>
+            </div>
+            <p class="benefits-label">O que a MPA faz por você:</p>
+            <div class="benefits">
+                <div class="benefit">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13l2 2 4-4"/></svg></div>
+                    <div><h3>Organização e revisão de toda documentação</h3>
+                    <p>Reunimos e conferimos cada documento exigido, sem você se perder na burocracia.</p></div>
+                </div>
+                <div class="benefit">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+                    <div><h3>Análise e cálculo de renda familiar</h3>
+                    <p>Avaliamos a composição da família para enquadrar seu caso nas regras do benefício.</p></div>
+                </div>
+                <div class="benefit">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1"/><path d="M12 18v4M8 22h8"/></svg></div>
+                    <div><h3>Perícia médica (no caso de deficiência)</h3>
+                    <p>Preparamos você para a perícia que comprova o impedimento de longo prazo.</p></div>
+                </div>
+                <div class="benefit">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg></div>
+                    <div><h3>Acompanhamento em todas as etapas do processo</h3>
+                    <p>Do pedido à concessão, você tem contato direto com o seu advogado.</p></div>
+                </div>
+                <div class="benefit benefit-wide">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+                    <div><h3>Defesa em caso de negativa</h3>
+                    <p>Se o INSS indeferir o pedido, entramos com recurso e defendemos o seu direito até o fim.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== QUEM PODE ===== -->
+    <section class="block">
+        <div class="container">
+            <div class="sec-head">
+                <div class="eyebrow">Requisitos</div>
+                <h2>Quem tem direito ao <span class="hl">BPC LOAS?</span></h2>
+                <p>Veja se você se encaixa nos requisitos e descubra se já pode solicitar o benefício.</p>
+            </div>
+            <div class="quem-grid">
+                <div class="quem-item">
+                    <div class="quem-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                    <div class="quem-texto"><strong>Idosos a partir de 65 anos</strong> em situação de vulnerabilidade financeira.</div>
+                </div>
+                <div class="quem-item">
+                    <div class="quem-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                    <div class="quem-texto"><strong>Pessoas com deficiência</strong> de qualquer idade, com impedimento de longo prazo comprovado em perícia.</div>
+                </div>
+                <div class="quem-item">
+                    <div class="quem-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                    <div class="quem-texto"><strong>Renda familiar baixa</strong> por pessoa. Existem exceções previstas em lei, então vale a análise do seu caso.</div>
+                </div>
+                <div class="quem-item">
+                    <div class="quem-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                    <div class="quem-texto"><strong>Sem contribuição ao INSS.</strong> Não é preciso ter contribuído nem trabalhado com carteira assinada.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STATS (autoridade) ===== -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+                    <div class="n">28+</div><div class="l"><b>Anos de experiência</b>em Direito Previdenciário</div>
+                </div>
+                <div class="stat">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg></div>
+                    <div class="n">Troféu Aurum</div><div class="l"><b>Excelência jurídica</b>reconhecimento nacional</div>
+                </div>
+                <div class="stat">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+                    <div class="n">Brasil + Exterior</div><div class="l"><b>Atendimento completo</b>onde você estiver</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== COMO FUNCIONA ===== -->
+    <section class="block">
+        <div class="container">
+            <div class="sec-head">
+                <div class="eyebrow">Passo a passo</div>
+                <h2>Como funciona o seu atendimento</h2>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="num">01</div>
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+                    <h3>Faça sua análise</h3>
+                    <p>Preencha o formulário e avaliamos seu caso, sem compromisso, para saber se o BPC LOAS se aplica a você.</p>
+                </div>
+                <div class="step">
+                    <div class="num">02</div>
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13l2 2 4-4"/></svg></div>
+                    <h3>Reunião de documentos</h3>
+                    <p>Organizamos as comprovações, o cálculo da renda familiar e, se houver deficiência, a perícia médica.</p>
+                </div>
+                <div class="step">
+                    <div class="num">03</div>
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg></div>
+                    <h3>Entrada no INSS</h3>
+                    <p>Cuidamos de todo o pedido do BPC LOAS e acompanhamos até a concessão do seu benefício.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FORMULÁRIO ===== -->
+    <section class="block" id="formulario">
+        <div class="container">
+            <div class="form-grid">
+                <div>
+                    <h2>Solicite a <span class="hl">análise do seu caso</span> de BPC LOAS</h2>
+                    <p class="lead">Responda às perguntas ao lado e receba uma avaliação sem compromisso com um advogado previdenciário.</p>
+                    <ul>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Análise do seu caso, sem compromisso</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Não exige contribuição ao INSS</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Atendimento humanizado, direto com advogado</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Atendemos em todo o Brasil e no exterior</li>
+                    </ul>
+                </div>
+                <div class="form-card">
+                    <div class="fc-head">
+                        <span class="fc-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span>
+                        <span class="fc-txt"><b>Faça sua análise</b><span>Leva menos de 1 minuto • Sem compromisso</span></span>
+                    </div>
+                    <!-- Formulario nativo para WhatsApp -->
+                    <form class="lead-form" id="leadForm" onsubmit="return enviarWhatsApp(event)" novalidate>
+                        <div class="field">
+                            <label for="lf-nome">Nome completo</label>
+                            <div class="input-wrap">
+                                <svg class="fi" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                <input type="text" id="lf-nome" name="nome" required placeholder="Como podemos te chamar?">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="lf-fone">WhatsApp / Telefone</label>
+                            <div class="input-wrap">
+                                <svg class="fi" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                <input type="tel" id="lf-fone" name="telefone" required inputmode="tel" placeholder="(00) 00000-0000">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="lf-idade">Idade de quem precisa do benefício <span style="font-weight:400;color:#9a918d">(opcional)</span></label>
+                            <div class="input-wrap">
+                                <svg class="fi" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                                <input type="number" id="lf-idade" name="idade" min="0" max="120" placeholder="Ex: 65">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="lf-def">Existe deficiência ou limitação de longo prazo?</label>
+                            <div class="input-wrap">
+                                <svg class="fi" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                                <select id="lf-def" name="deficiencia">
+                                    <option value="Não informado">Selecione</option>
+                                    <option value="Sim">Sim</option>
+                                    <option value="Não">Não</option>
+                                    <option value="Não sei informar">Não sei informar</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="lf-renda">A renda familiar é baixa?</label>
+                            <div class="input-wrap">
+                                <svg class="fi" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                <select id="lf-renda" name="renda">
+                                    <option value="Não informado">Selecione</option>
+                                    <option value="Sim">Sim</option>
+                                    <option value="Não">Não</option>
+                                    <option value="Preciso calcular">Preciso calcular</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-cta">QUERO MINHA ANÁLISE SEM COMPROMISSO</button>
+                        <p class="note">Seus dados estão seguros. Atendimento imediato pelo WhatsApp.</p>
+                    </form>
+                    <div class="form-ok" id="formOk">
+                        <div class="ok-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+                        <h3>Tudo certo!</h3>
+                        <p>Estamos te redirecionando para o WhatsApp para finalizar a análise do seu caso. Se não abrir, clique no botão verde no canto da tela.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="foot-cta">
+                <div>
+                    <h3>Ainda tem dúvidas se você tem direito ao BPC LOAS?</h3>
+                    <p>Fale agora com a nossa equipe e receba a análise do seu caso, sem compromisso.</p>
+                </div>
+                <a class="foot-wa" href="https://wa.me/5519995230707?text=Ol%C3%A1!%20Quero%20saber%20se%20tenho%20direito%20ao%20BPC%20LOAS." target="_blank" rel="noopener" aria-label="Falar no WhatsApp com a MPA Advogados" onclick="trackCTA('footer-whatsapp')">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                    Falar no WhatsApp
+                </a>
+            </div>
+            <div class="foot-grid">
+                <div>
+                    <div class="foot-brand-lockup">
+                        <span class="crest" role="img" aria-label="Logo MPA Advogados"></span>
+                        <span class="word">MPA Advogados<small>Advogados &amp; Associados</small></span>
+                    </div>
+                    <p>Especialistas em Direito Previdenciário com mais de 28 anos de experiência, ajudando brasileiros a conquistar seus direitos junto ao INSS.</p>
+                    <span class="trophy"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg> Troféu Aurum de Excelência Jurídica</span>
+                </div>
+                <div class="foot-addr">
+                    <h4>Endereço</h4>
+                    <p>R. Conceição, nº 233, Sala 1309<br>Campinas/SP</p>
+                    <p>R. Ramos de Azevedo, 350, Sala 17<br>Centro, Cosmópolis/SP</p>
+                </div>
+                <div class="foot-areas">
+                    <h4>Áreas de Atuação</h4>
+                    <ul>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> BPC / LOAS</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Aposentadoria por Idade</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Aposentadoria da Pessoa com Deficiência</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Invalidez e Auxílio-Doença</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Revisão de Benefícios</li>
+                    </ul>
+                </div>
+                <div class="foot-contact">
+                    <h4>Precisa de ajuda?</h4>
+                    <a href="tel:+551932363468">(19) 3236-3468</a>
+                    <a href="tel:+551925198674">(19) 2519-8674</a>
+                    <a href="tel:+551925198605">(19) 2519-8605</a>
+                    <a class="wa-line" href="https://wa.me/5519995230707" target="_blank" rel="noopener" aria-label="WhatsApp MPA Advogados">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>(19) 99523-0707
+                    </a>
+                    <p style="margin-top:14px;">Atendemos em todo o Brasil e brasileiros no exterior.</p>
+                </div>
+            </div>
+            <div class="copy">
+                <p>© 2025 MPA Advogados &amp; Associados. Todos os direitos reservados.</p>
+                <p style="margin-top:6px;">Produzido e gerenciado por <strong>V4 Company | LISBOA &amp; CO</strong></p>
+                <span class="disc">Este site não faz parte do Google Inc. ou do Facebook Inc. e não oferecemos nenhum tipo de garantia de resultado. Cada caso depende da análise dos documentos e dos requisitos legais.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        /* ===== CONFIG ===== */
+        var WHATS_NUMERO = '5519995230707';
+
+        // ---- Tracking obrigatório (padrão da empresa) ----
+        function trackCTA(origem) {
+            try {
+                if (window.dataLayer) { window.dataLayer.push({ event:'click_cta', cta_origem: origem || 'cta' }); }
+                if (typeof gtag === 'function') { gtag('event','click_cta',{ event_category:'conversao', event_label: origem || 'cta' }); }
+                if (typeof fbq === 'function') { fbq('track','Lead',{ source: origem || 'cta' }); }
+                console.log('CTA clicado:', origem || 'cta');
+            } catch (e) {}
+        }
+
+        // ---- Envio do formulario nativo para WhatsApp ----
+        function enviarWhatsApp(e) {
+            e.preventDefault();
+            var nome  = (document.getElementById('lf-nome').value || '').trim();
+            var fone  = (document.getElementById('lf-fone').value || '').trim();
+            if (!nome) { document.getElementById('lf-nome').focus(); return false; }
+            if (!fone) { document.getElementById('lf-fone').focus(); return false; }
+
+            var idade = (document.getElementById('lf-idade').value || '').trim();
+            var def   = document.getElementById('lf-def').value || 'Não informado';
+            var renda = document.getElementById('lf-renda').value || 'Não informado';
+
+            var msg = 'Olá! Quero descobrir se tenho direito ao BPC LOAS.\n\n'
+                    + 'Nome: ' + nome + '\n'
+                    + 'WhatsApp: ' + fone + '\n'
+                    + (idade ? ('Idade: ' + idade + '\n') : '')
+                    + 'Deficiência ou limitação de longo prazo: ' + def + '\n'
+                    + 'Renda familiar baixa: ' + renda;
+            try { var u = sessionStorage.getItem('utm_data'); if (u) { msg += '\n\nOrigem: ' + u; } } catch (_) {}
+
+            trackCTA('form-bpc-whatsapp');
+            try {
+                if (typeof fbq === 'function') { fbq('track', 'Lead', { content_name: 'BPC LOAS' }); }
+                if (window.dataLayer) { window.dataLayer.push({ event: 'lead_submit', pagina: 'bpc-loas' }); }
+            } catch (_) {}
+
+            var url = 'https://wa.me/' + WHATS_NUMERO + '?text=' + encodeURIComponent(msg);
+            window.open(url, '_blank');
+
+            var fm = document.getElementById('leadForm'); if (fm) fm.style.display = 'none';
+            var ok = document.getElementById('formOk'); if (ok) ok.classList.add('show');
+            return false;
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // page_view automático
+            try { if (window.dataLayer) { window.dataLayer.push({ event:'page_view', page:'bpc-loas' }); } } catch (e) {}
+
+            // ---- UTM parameters: persiste e injeta no formulário ----
+            try {
+                var qs = window.location.search;
+                if (qs) {
+                    var params = new URLSearchParams(qs);
+                    var utm = {};
+                    ['utm_source','utm_medium','utm_campaign','utm_term','utm_content'].forEach(function (k) {
+                        if (params.get(k)) utm[k] = params.get(k);
+                    });
+                    if (Object.keys(utm).length) { sessionStorage.setItem('utm_data', JSON.stringify(utm)); }
+                }
+            } catch (e) {}
+
+            // ---- Animações de scroll (reveal) ----
+            try {
+                var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                function tag(el, d) { el.classList.add('reveal'); if (d) el.classList.add('d' + d); }
+                ['.cards', '.benefits', '.quem-grid', '.steps', '.stats-grid'].forEach(function (g) {
+                    document.querySelectorAll(g).forEach(function (grid) {
+                        Array.prototype.forEach.call(grid.children, function (ch, i) { tag(ch, Math.min(i + 1, 4)); });
+                    });
+                });
+                document.querySelectorAll('.sec-head, .solve, .form-grid > div, .foot-grid > div').forEach(function (el) { tag(el); });
+                var els = document.querySelectorAll('.reveal');
+                if (reduce || !('IntersectionObserver' in window)) {
+                    els.forEach(function (e) { e.classList.add('in'); });
+                } else {
+                    var io = new IntersectionObserver(function (ents) {
+                        ents.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+                    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+                    els.forEach(function (e) { io.observe(e); });
+                }
+            } catch (e) {}
+        });
+    </script>
+</body>
+</html>

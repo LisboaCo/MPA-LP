@@ -1,0 +1,1 @@
+import{V as a,a as s,aM as e,z as r,A as c,B as n}from"./EwDkLrRW.js";const l=a({__name:"form",setup(o){return s({script:[{src:e.IFRAME_RESIZE,async:!0,type:"text/javascript"},{src:e.IFRAME_PIXEL,async:!0,type:"text/javascript"}]}),(t,p)=>(r(),c("div",null,[n(t.$slots,"default")]))}});export{l as default};

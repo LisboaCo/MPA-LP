@@ -1,0 +1,1 @@
+import{f as e}from"./BwTEgAwO.js";import{z as r,A as t,B as s}from"./EwDkLrRW.js";const n={};function a(o,l){return r(),t("span",{class:"short-label"},[s(o.$slots,"default")])}const m=e(n,[["render",a]]);export{m as _};

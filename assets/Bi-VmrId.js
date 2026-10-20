@@ -1,0 +1,1 @@
+import{_ as n,z as t,A as s,B as o}from"./EwDkLrRW.js";const r={},a={class:"child-container"};function c(e,i){return t(),s("div",a,[o(e.$slots,"default")])}const l=Object.assign(n(r,[["render",c]]),{__name:"PreviewChildContainer"});export{l as default};
